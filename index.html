@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Maquiagem</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Menu Toggle */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+        }
+        .menu-toggle .bar {
+            display: block;
+            background: white;
+            height: 3px;
+            width: 30px;
+            margin: 5px auto;
+            transition: 0.3s;
+        }
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            padding: 70px 20px 20px; /* Espaço para o cabeçalho fixo */
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .products-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: calc(25% - 20px);
+            margin: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+        .product-item h3 {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .product-item p {
+            padding: 0 10px;
+            color: #666;
+        }
+        .product-item .price {
+            font-size: 1.2em;
+            color: #e67e22;
+            margin: 10px 0;
+        }
+        .product-item button {
+            background: #e67e22;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .product-item button:hover {
+            background: #d35400;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .menu {
+                display: none;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (min-width: 601px) {
+            .menu {
+                display: block;
+            }
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Loja de Maquiagem</h1>
+        <nav>
+            <div id="menu-toggle" class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul id="menu" class="menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="hero">
+            <h2>Descubra a Beleza com Nossos Produtos</h2>
+            <p>Encontre maquiagem de alta qualidade e tendências de beleza. Compre agora e realce sua beleza!</p>
+        </section>
+        <section>
+            <h2>Produtos em Destaque</h2>
+            <div class="products-list">
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Base Líquida">
+                    <h3>Base Líquida</h3>
+                    <p>Base líquida com acabamento matte e longa duração.</p>
+                    <div class="price">R$ 79,90</div>
+                    <button>Comprar</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Batons Matte">
+                    <h3>Batons Matte</h3>
+                    <p>Batons matte em várias cores intensas.</p>
+                    <div class="price">R$ 39,90</div>
+                    <button>Comprar</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Sombra Compacta">
+                    <h3>Sombra Compacta</h3>
+                    <p>Sombra compacta com alta pigmentação e duração.</p>
+                    <div class="price">R$ 45,90</div>
+                    <button>Comprar</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Máscara para Cílios">
+                    <h3>Máscara para Cílios</h3>
+                    <p>Máscara para cílios com efeito volumizador e alongador.</p>
+                    <div class="price">R$ 59,90</div>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Loja de Maquiagem. Desenvolvido por:</p>
+        <p>Aluno 1, Aluno 2, Aluno 3</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
